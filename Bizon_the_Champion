@@ -1,0 +1,39 @@
+/* Bizon the Champion is called the Champion for a reason.
+Bizon the Champion has recently got a present — a new glass cupboard with n shelves and he decided to put all his presents there. All the presents can be divided into two types: medals and cups. Bizon the Champion has a1 first prize cups, a2 second prize cups and a3third prize cups. Besides, he has b1 first prize medals, b2 second prize medals and b3 third prize medals.
+Naturally, the rewards in the cupboard must look good, that's why Bizon the Champion decided to follow the rules:
+any shelf cannot contain both cups and medals at the same time;
+no shelf can contain more than five cups;
+no shelf can have more than ten medals.
+Help Bizon the Champion find out if we can put all the rewards so that all the conditions are fulfilled. */
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,a[4],b[4],s1=0,s2=0;
+    for(int i=0;i<3;i++)
+    cin>>a[i];
+    for(int i=0;i<3;i++)
+    cin>>b[i];
+    cin>>n;
+    if(n<2)
+    cout<<"NO";
+    else
+    {
+        for(int i=0;i<3;i++)
+        {
+        s1+=a[i];
+        s2+=b[i];
+        }
+        if(s1<=5&&s2<=10)
+        cout<<"YES";
+        else
+        cout<<"NO";
+        
+    }
+
+    return 0;
+}
